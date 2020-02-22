@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   resources :study_areas
   resources :sensors
