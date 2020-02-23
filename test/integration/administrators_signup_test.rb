@@ -21,6 +21,6 @@ class AdministratorsSignupTest < ActionDispatch::IntegrationTest
                                          password_confirmation: "password" } }
     end
     follow_redirect!
-    assert_template 'administrators/new'
+    assert_template 'administrators/show'
   end
 end
