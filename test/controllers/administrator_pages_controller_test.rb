@@ -4,7 +4,7 @@ class AdministratorPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get administrator_pages_home_url
     assert_response :success
-    assert_select "title", "Home | Transparency"
+    assert_select "title", "Transparency"
   end
 
   test "should get help" do
