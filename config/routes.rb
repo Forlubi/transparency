@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get  '/about',   to: 'administrator_pages#about'
   get  '/contact', to: 'administrator_pages#contact'
   get  '/signup',  to: 'administrators#new'
+  resources :administrators
 
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
