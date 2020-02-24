@@ -22,5 +22,6 @@ class AdministratorsSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template 'administrators/show'
+    assert is_logged_in?
   end
 end

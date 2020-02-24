@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   get 'administrators/new'
   root 'administrator_pages#home'
   #get 'administrator_pages/home'
@@ -6,6 +7,9 @@ Rails.application.routes.draw do
   get  '/about',   to: 'administrator_pages#about'
   get  '/contact', to: 'administrator_pages#contact'
   get  '/signup',  to: 'administrators#new'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
   resources :administrators
 
 
