@@ -24,120 +24,164 @@ body {
     padding-top: 30px;
   }
   */
-  section {
-    overflow: auto;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  
-  .center h1 {
-    margin-bottom: 10px;
-  }
-  
-  /* typography */
-  
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1;
-  }
-  
-  h1 {
-    font-size: 2.3em;
-    letter-spacing: 1.2px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #091F2F;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-  }
-  
-  h2 {
-    font-size: 1em;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: normal;
-    color:#061622;
-  }
-  
-  p {
-    font-size: 1.1em;
-    line-height: 1.7em;
-  }
-  
-  /* header  -- CHANGE TO Montserrat, COLORING charles blue with red underline*/
-  
-  #logo {   
-    text-align: center;
-    margin-right: 30px;
-    font-size: 1.7em;
-    color: #091F2F;
-    padding-top: 9px;
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: underline;
-    text-decoration-color: #FB4D42;
-  }
-  #navigation{
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
-    color:#0C2639
-  }
+section {
+  overflow: auto;
+}
 
-  #logo:hover {
-    color: #fafafa;
-    text-decoration: none;
-  }
-  
-  u {
-    text-decoration: underline;
-    text-decoration-color: #FB4D42;
-  }
-  /*hides all images*/
-  
-  img {
-    display: none;
-  }
-  
-  /* footer */
-  
-  footer {
-    margin: 10px auto;
-    padding: 10px;
-    width: 840px;
-    text-align: center;
-    margin-top: 15px;
-    padding-top: 5px;
-    border-top: 1px solid #eaeaea;
-    color: #D2D2D2;
-    background-color: #0C2639;
-  }
-  
-  footer a {
-    color: #D2D2D2;
-  }
-  
-  footer a:hover {
-    color:#F2F2F2;
-  }
-  
-  footer small {
-    text-align: center;
-    font-family: "Lora", sans-serif;
-    color: #D2D2D2
-  }
-  
-  footer ul {
-    float: right;
-    list-style: none;
-  }
-  
-  footer ul li {
-    float: left;
-    margin-left: 15px;
-  }
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.3em;
+  letter-spacing: 1.2px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color:white;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header  -- CHANGE TO Montserrat, COLORING charles blue with red underline*/
+
+#logo {   
+  text-align: center;
+  margin-right: 30px;
+  font-size: 1.7em;
+  color: #091F2F;
+  padding-top: 9px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+  text-decoration-color: #FB4D42;
+}
+#navigation{
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color:#0C2639
+}
+
+#logo:hover {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+u {
+  text-decoration: underline;
+  text-decoration-color: #FB4D42;
+}
+/*hides all images*/
+
+img {
+  display: none;
+}
+
+/* footer */
+
+footer {
+  margin: 10px auto;
+  padding: 10px;
+  width: 840px;
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #D2D2D2;
+  background-color: #0C2639;
+}
+
+footer a {
+  color: #D2D2D2;
+}
+
+footer a:hover {
+  color:#F2F2F2;
+}
+
+footer small {
+  text-align: center;
+  font-family: "Lora", sans-serif;
+  color: #D2D2D2
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+  /* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: #091F2F;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #288BE4;
+  color: #091F2F;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #288BE4;
+  color: white;
+}
+
+.header {
+  padding: 3px;
+  text-align: left;
+  background: #091F2F;
+  color: white;
+  font-size: 10px;
+
+  font-family: "Monserrat", sans-serif;
+  text-decoration: underline; 
+  text-decoration-color: #FB4D42;
+}
