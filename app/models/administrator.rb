@@ -7,6 +7,8 @@ class Administrator < ApplicationRecord
                                       uniqueness: true
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
+    #validates :access_code, presence: true
+    validates :access_code, inclusion: { in: ["pororo"] }
 
     # Returns the hash digest of the given string.
     def Administrator.digest(string)
