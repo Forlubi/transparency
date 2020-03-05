@@ -15,4 +15,18 @@ class ActiveSupport::TestCase
   def is_logged_in?
     !session[:administrator_id].nil?
   end
+  # Log in as a particular user.
+  def log_in_as(administrator)
+    session[:administrator_id] = administrator.id
+  end
+end
+
+class ActionDispatch::IntegrationTest
+
+  # Log in as a particular user.
+  def log_in_as(administrator, password: 'password', remember_me: '1')
+    post login_path, params: { session: { email: administrator.email,
+                                          password: password,
+                                          remember_me: remember_me } }
+  end
 end

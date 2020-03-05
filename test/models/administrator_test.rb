@@ -61,4 +61,8 @@ class AdministratorTest < ActiveSupport::TestCase
     @administrator.password = @administrator.password_confirmation = "a" * 5
     assert_not @administrator.valid?
   end
+
+  test "authenticated? should return false for an administrator with nil digest" do
+    assert_not @administrator.authenticated?('')
+  end
 end

@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     administrator = Administrator.find_by(email: params[:session][:email].downcase)
     if administrator && administrator.authenticate(params[:session][:password])
       log_in administrator
+      params[:session][:remember_me] == '1' ? remember(administrator) : forget(administrator)
       #redirect_to administrator
       redirect_to "/admin"
     else
@@ -15,7 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end
