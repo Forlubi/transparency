@@ -3,7 +3,7 @@ require 'test_helper'
 class AdministratorTest < ActiveSupport::TestCase
   def setup
     @administrator = Administrator.new(name: "Example Admin", email: "admin@example.com",
-                               password: "foobar", password_confirmation: "foobar")
+                               password: "foobar", password_confirmation: "foobar", access_code: "pororo")
   end
 
   test "should be valid" do

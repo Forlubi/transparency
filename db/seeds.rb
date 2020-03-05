@@ -20,7 +20,8 @@ StudyArea.delete_all
   Administrator.create!(name: Faker::Name.name, 
                 email: Faker::Internet.email, 
                 password: password, 
-                password_confirmation: password)
+                password_confirmation: password, 
+                access_code: 'pororo')
 end
 
 15.times do
